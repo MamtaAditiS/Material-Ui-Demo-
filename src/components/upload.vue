@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <button class="btn btn-success">Upload Files</button>
-    
+
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js File Uploader'
+      msg: 'Welcome to Vue.js File Uploader'
     }
   }
 }

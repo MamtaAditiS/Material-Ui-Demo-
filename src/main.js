@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+var VueMaterial = require('vue-material')
+
+Vue.use(VueMaterial)
 
 Vue.config.productionTip = false
 

@@ -1,12 +1,16 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <div v-bind:style="{ color : 'grey' }">
+        <Dropzone/>
+    </div>
     <button class="btn btn-success">Upload Files</button>
 
   </div>
 </template>
 
 <script>
+import Dropzone from 'react-dropzone'
 export default {
   name: 'upload',
   data () {

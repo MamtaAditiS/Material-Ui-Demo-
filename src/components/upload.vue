@@ -1,22 +1,22 @@
 <template>
-  <div class="hello">
+  <div class="container">
     <h1>{{ msg }}</h1>
-    <div v-bind:style="{ color : 'grey' }">
-        <Dropzone/>
+    <div class="row gallery" v-show="$upload.dropzone('product-gallery').active">
+      <span class="text-span"> Drop files anywhere here to begin upload. </span>
     </div>
-    <button class="btn btn-success">Upload Files</button>
-
   </div>
 </template>
 
 <script>
-import Dropzone from 'react-dropzone'
+
 export default {
   name: 'upload',
   data () {
     return {
       msg: 'Welcome to Vue.js File Uploader'
     }
+  },
+  created : function () {
   }
 }
 </script>
@@ -40,4 +40,20 @@ li {
 a {
   color: #42b983;
 }
+
+.row.gallery {
+  display: block !important;
+  background-color: aliceblue;
+  height: 250px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.text-span {
+  position: absolute;
+    left: 450px;
+    top: 100px;
+  
+}
+
 </style>

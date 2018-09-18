@@ -10,9 +10,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@websanova/vue-upload": "^1.2.1-beta",
     "material-ui": "^0.18.7",
-    "react-dropzone": "^5.1.0",
-    "react-tap-event-plugin": "^2.0.1",
     "vue": "^2.3.3",
     "vue-material": "^0.7.4",
     "vue-router": "^2.6.0"

@@ -1,33 +1,36 @@
 <template>
   <div class="container">
     <h1>{{ msg }}</h1>
-    <div class="row gallery" v-show="$upload.dropzone('product-gallery').active" >
+    <div class="row gallery">
       <span class="text-span"> Drop files anywhere here to begin upload. </span>
     </div>
   </div>
 </template>
 
 <script>
-
+import FileUpload from 'vue-upload-component/src'
 export default {
   name: 'upload',
   data () {
     return {
-      msg: 'Welcome to Vue.js File Uploader'
+      msg: 'Vue.js File Uploader'
     }
+  },
+  components: {
+    FileUpload : FileUpload
   },
   created : function () {
     
   }, 
   uploadedFiles : function () {
-    this.$upload.on('gallery', {
-      onSuccess(res) {
-        console.log(res)
-      },
-      onError() {
-        console.log('Error uploading avatar.');
-      }
-    });
+    // this.$upload.on('gallery', {
+    //   onSuccess(res) {
+    //     console.log(res)
+    //   },
+    //   onError() {
+    //     console.log('Error uploading avatar.');
+    //   }
+    // });
   }
 }
 </script>
